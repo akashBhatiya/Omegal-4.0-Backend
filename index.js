@@ -1,7 +1,7 @@
 require("dotenv").config()
 const express = require("express");
 const cors = require("cors");
-const connectDB = require("./database");
+// const connectDB = require("./database");
 const userRoutes = require("./routes/user");
 const session = require("express-session");
 const http = require('http');
@@ -63,7 +63,7 @@ app.use(
 
 
 
-connectDB();
+// connectDB();
 app.use("/api/user", userRoutes);
 app.get("/", (req, res) => {
   res.send("app is running now");
